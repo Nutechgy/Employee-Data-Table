@@ -14,9 +14,9 @@ async function mainMenu() {
             name: 'choice',
             message: 'What would you like to do?',
             choices: [
-                'View all departments',
-                'View all roles',
-                'View all employees',
+                'View all department',
+                'View all role',
+                'View all employee',
                 'Add a department',
                 'Add a role',
                 'Add an employee',
@@ -26,13 +26,13 @@ async function mainMenu() {
         });
 
         switch (choice) {
-            case 'View all departments':
+            case 'View all department':
                 await viewAllDepartments();
                 break;
-            case 'View all roles':
+            case 'View all role':
                 await viewAllRoles();
                 break;
-            case 'View all employees':
+            case 'View all employee':
                 await viewAllEmployees();
                 break;
             case 'Add a department':
@@ -59,11 +59,11 @@ async function mainMenu() {
 
 async function viewAllDepartments() {
     try {
-        const query = 'SELECT * FROM departments';
+        const query = 'SELECT * FROM department';
         const result = await pool.query(query);
         console.table(result.rows);
     } catch (error) {
-        console.error('Error retrieving departments:', error);
+        console.error('Error retrieving department:', error);
     }
     mainMenu();
 }
@@ -71,14 +71,14 @@ async function viewAllDepartments() {
 async function viewAllRoles() {
     try {
         const query = `
-            SELECT roles.id, roles.title, roles.salary, departments.name AS department
-            FROM roles
-            INNER JOIN departments ON roles.department_id = departments.id
+            SELECT role.id, role.title, role.salary, department.name AS department
+            FROM role
+            INNER JOIN department ON role.department_id = department.id
         `;
         const result = await pool.query(query);
         console.table(result.rows);
     } catch (error) {
-        console.error('Error retrieving roles:', error);
+        console.error('Error retrieving role:', error);
     }
     mainMenu();
 }
@@ -86,17 +86,17 @@ async function viewAllRoles() {
 async function viewAllEmployees() {
     try {
         const query = `
-            SELECT employees.id, employees.first_name, employees.last_name, 
-                   roles.title AS role, roles.salary, 
-                   departments.name AS department
-            FROM employees
-            INNER JOIN roles ON employees.role_id = roles.id
-            INNER JOIN departments ON roles.department_id = departments.id
+            SELECT employee.id, employee.fname, employee.lname, 
+                   role.title AS role, role.salary, 
+                   department.name AS department
+            FROM employee
+            INNER JOIN role ON employee.role_id = role.id
+            INNER JOIN department ON role.department_id = department.id
         `;
         const result = await pool.query(query);
         console.table(result.rows);
     } catch (error) {
-        console.error('Error retrieving employees:', error);
+        console.error('Error retrieving employee:', error);
     }
     mainMenu();
 }
@@ -108,7 +108,7 @@ async function addDepartment() {
             name: 'departmentName',
             message: 'Enter the name of the new department:',
         });
-        const query = 'INSERT INTO departments (name) VALUES ($1)';
+        const query = 'INSERT INTO department (name) VALUES ($1)';
         const values = [departmentName];
         await pool.query(query, values);
         console.log('New department added successfully!');
@@ -137,7 +137,7 @@ async function addRole() {
                 message: 'Enter the department ID for the new role:',
             },
         ]);
-        const query = 'INSERT INTO roles (title, salary, department_id) VALUES ($1, $2, $3)';
+        const query = 'INSERT INTO role (title, salary, department_id) VALUES ($1, $2, $3)';
         const values = [title, salary, departmentId];
         await pool.query(query, values);
         console.log('New role added successfully!');
@@ -171,7 +171,7 @@ async function addEmployee() {
                 message: 'Enter the manager ID for the new employee:',
             },
         ]);
-        const query = 'INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ($1, $2, $3, $4)';
+        const query = 'INSERT INTO employee (fname, lname, role_id, manager_id) VALUES ($1, $2, $3, $4)';
         const values = [firstName, lastName, roleId, managerId];
         await pool.query(query, values);
         console.log('New employee added successfully!');
@@ -195,7 +195,7 @@ async function updateEmployeeRole() {
                 message: 'Enter the new role ID for the employee:',
             },
         ]);
-        const query = 'UPDATE employees SET role_id = $1 WHERE id = $2';
+        const query = 'UPDATE employee SET role_id = $1 WHERE id = $2';
         const values = [roleId, employeeId];
         await pool.query(query, values);
         console.log('Employee role updated successfully!');
@@ -204,4 +204,5 @@ async function updateEmployeeRole() {
     }
     mainMenu();
   }
-  // Call the mainMenu functionyo start yhe application
+  // Call the mainMenu function start the application
+  module.exports = mainMenu
