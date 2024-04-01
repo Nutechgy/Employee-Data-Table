@@ -1,6 +1,9 @@
 # Employee-Data-Table
 <video controls src="20240325-1707-27.9092000.mp4" title="Emplyee-Table-Data"></video>
+
 "C:\Users\terem\OneDrive\Pictures\Screenshots\Recording 2024-03-25 131250.mp4"
+
+A command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 Walk through video domonstarating of me creating a table data of employees for .
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
@@ -22,6 +25,7 @@ WHEN I choose to add an employee
 THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
-A command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
-https://1drv.ms/v/s!Alsgg17rEtJzgaU84vlTjPlUewbKbw?e=rByeLw
+
+https://1drv.ms/v/s!Alsgg17rEtJzgaU84vlTjPlUewbKbw?e=rByeLw/
+
 https://sleepy-citadel-02829-4a36e97c278d.herokuapp.com/
