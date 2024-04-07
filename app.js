@@ -203,6 +203,4 @@ async function updateEmployeeRole() {
         console.error('Error updating employee role:', error);
     }
     mainMenu();
-  }
-  // Call the mainMenu function start the application
-  module.exports = mainMenu
+}
