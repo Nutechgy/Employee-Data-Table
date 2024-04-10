@@ -36,7 +36,7 @@ This command-line application allows business owners to view and manage departme
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Walkthrough Video](#walkthrough-video) 
+- [Walkthrough Video](#walkthrough-video) "C:\Users\terem\OneDrive\Pictures\Screenshots\Recording 2024-04-10 054016.mp4"
 - [Technical Details](#technical-details)
 - [Contributing](#contributing)
 - [License](#license)
