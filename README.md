@@ -24,9 +24,7 @@ THEN I am prompted to enter the name, salary, and department for the role and th
 WHEN I choose to add an employee
 THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
 WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database
-
-https://1drv.ms/v/s!Alsgg17rEtJzgaU84vlTjPlUewbKbw?e=rByeLw
+THEN I am prompted to select an employee to update and their new role and this information is updated in the databas
 
 # Employee Tracker
 
@@ -36,7 +34,7 @@ This command-line application allows business owners to view and manage departme
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Walkthrough Video](#walkthrough-video) "C:\Users\terem\OneDrive\Pictures\Screenshots\Recording 2024-04-10 054016.mp4"
+- [Walkthrough Video](#walkthrough-video) https://1drv.ms/v/s!Alsgg17rEtJzhLUgTUGQLUo0lnbdiQ?e=Kuv3Yb
 - [Technical Details](#technical-details)
 - [Contributing](#contributing)
 - [License](#license)
@@ -96,6 +94,7 @@ Follows the table schema outlined in the schema.sql file.
 Contributing
 Contributions are welcome! If you have any suggestions, enhancements, or bug fixes, feel free to open an issue or create a pull request.
 
+heres the link to video : https://1drv.ms/v/s!Alsgg17rEtJzhLUgTUGQLUo0lnbdiQ?e=Kuv3Yb
 
 
 
