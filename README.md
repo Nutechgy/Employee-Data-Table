@@ -45,7 +45,7 @@ This command-line application allows business owners to view and manage departme
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/employee-tracker.git
+   https://github.com/Nutechgy/Employee-Data-Table.git
 Navigate to the Project Directory:
 
 bash
@@ -96,13 +96,6 @@ Follows the table schema outlined in the schema.sql file.
 Contributing
 Contributions are welcome! If you have any suggestions, enhancements, or bug fixes, feel free to open an issue or create a pull request.
 
-License
-This project is licensed under the MIT License.
-
-css
-Copy code
-
-Replace the placeholder text (e.g., `your-username`, `link-to-your-video`) with appropriate values specific to your project. This README template provides installation instructions, usage guidelines, information about the walkthrough video, technical details, contribution guidelines, and licensing details. Make sure to include a link to your walkthrough video demonstrating the functionality of the employee tracker as specified in the acceptance criteria.
 
 
 
